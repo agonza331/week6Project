@@ -1,13 +1,8 @@
 // Deal 26 Cards to each Player from a Deck of 52 cards.
-
 //Iterate through the turns where each Player plays a Card.
-
 //The Player who played the higher card is awarded a point.
-
 //Ties result in zero points for both Players.
-
 //After all cards have been played, display the score and declare the winner.
-
 //Write a Unit Test using Mocha and Chai for at least one of the functions you write.
 
 class Card {
@@ -74,11 +69,12 @@ class Card {
       player1.hand.push(deck.deal());
       player2.hand.push(deck.deal());
     }
+    console.log(player1.hand)
+    console.log(player2.hand)
   
   //pop last card each time for 26 cards
     for (let i = 0; i <26; i++) {
       let card1 = player1.hand.pop();
-
       let card2 = player2.hand.pop();
       
   // if card1 is bigger than card 2 then player 1 gets a pont or if other way around then player 2 gets a point 
@@ -98,7 +94,7 @@ class Card {
     }
 }
   // out of the whole function console.log the score for each player
-  playHand(player1, player2)  
+  playHand(player1, player2)
   console.log(`Player 1's score: ${player1.points}`);
   console.log(`Player 2's score: ${player2.points}`);
   
